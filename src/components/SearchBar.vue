@@ -29,6 +29,7 @@ export default defineComponent({
         border: none;
         border-bottom: 1px solid;
         border-bottom-color: #606060;
+        font-size: 2em;
         transition: all 0.5s;
     }
 
