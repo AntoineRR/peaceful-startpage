@@ -19,7 +19,7 @@ import IconLink from './IconLink.vue'; './SearchBar.vue';
     .frame {
         padding: 20px;
         border-radius: 20px;
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: var(--color-frame-background);
         backdrop-filter: blur(4px);
     }
 
