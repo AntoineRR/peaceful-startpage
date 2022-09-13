@@ -5,16 +5,16 @@ import Frame from "./components/Frame.vue";
 
 <template>
   <Background />
-  <div class="wrapper">
+  <div class="frameWrapper">
     <Frame />
   </div>
 </template>
 
 <style scoped>
-  .wrapper {
+  .frameWrapper {
     display: flex;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
   }

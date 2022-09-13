@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="frame">
         <button @click="changeSearchEngine">
             <font-awesome-icon :icon="searchEngines[currentSearchEngine].icon" size="lg" />
         </button>
@@ -35,30 +35,35 @@ export default defineComponent({
 </script>
 
 <style scoped>
-    .wrapper {
+    .frame {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: var(--color-frame-background);
+        backdrop-filter: blur(4px);
     }
 
     button {
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
-        color: rgba(0, 0, 0, 0.4);
+        height: max-content;
+        max-height: 100%;
+        color: var(--color-button);
         border: solid 1px;
         border-radius: 50%;
-        border-color: rgba(0, 0, 0, 0.4);
-        margin-right: 20px;
-        padding: 0px;
+        border-color: var(--color-button);
+        padding: 5px;
         background-color: rgba(0, 0, 0, 0);
-        font-size: 1.5em;
+        font-size: 2em;
         transition: all 0.5s;
     }
 
     button:hover {
-        color: rgba(0, 0, 0, 1);
-        border-color: rgba(0, 0, 0, 1);
+        color: var(--color-button-hover);
+        border-color: var(--color-button-hover);
     }
 
     input {

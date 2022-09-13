@@ -28,18 +28,17 @@ export default defineComponent({
         width: 80px;
         height: 80px;
         border: none;
-        border-radius: 50%;
-        margin: 20px;
-        margin-bottom: 0px;
+        border-radius: 20px;
         padding: 0px;
-        background-color: rgba(0, 0, 0, 0);
+        background-color: var(--color-frame-background);
+        backdrop-filter: blur(4px);
+        color: var(--color-button);
         font-size: 2.5em;
         transition: all 0.5s;
     }
 
     button:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-        font-size: 3em;
+        color: var(--color-button-hover);
     }
 
     font-awesome-icon {
