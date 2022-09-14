@@ -72,6 +72,7 @@ export default defineComponent({
         border: none;
         border-bottom: 1px solid;
         border-bottom-color: #606060;
+        font-family: inherit;
         font-size: 1.5em;
         transition: all 0.5s;
     }

@@ -25,11 +25,11 @@ export default defineComponent({
     button {
         justify-content: center;
         align-items: center;
-        width: 80px;
-        height: 80px;
+        height: max-content;
+        max-height: 100%;
         border: none;
         border-radius: 20px;
-        padding: 0px;
+        padding: 20px;
         background-color: var(--color-frame-background);
         backdrop-filter: blur(4px);
         color: var(--color-button);
