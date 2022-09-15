@@ -15,7 +15,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-const QUOTE_API_URL = '/q/random/';
+const RANDOM_QUOTE_API_PATH = '/random/';
 
 export default defineComponent({
     data() {
@@ -29,7 +29,7 @@ export default defineComponent({
     },
     methods: {
         async fetchQuote() {
-            let rawQuote = await (await fetch(QUOTE_API_URL)).json();
+            let rawQuote = await (await fetch(import.meta.env.VITE_QUOTES_API + RANDOM_QUOTE_API_PATH)).json();
             this.quote = rawQuote.content;
             this.author = rawQuote.author;
         }
