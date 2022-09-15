@@ -71,7 +71,7 @@ export default defineComponent({
         background-color: rgba(0, 0, 0, 0);
         border: none;
         border-bottom: 1px solid;
-        border-bottom-color: #606060;
+        border-bottom-color: var(--color-text-light);
         font-family: inherit;
         font-size: 1.5em;
         transition: all 0.5s;
@@ -79,6 +79,6 @@ export default defineComponent({
 
     input:focus {
         outline: none;
-        border-bottom-color: #181818;
+        border-bottom-color: var(--color-text);
     }
 </style>

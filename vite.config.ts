@@ -11,5 +11,14 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  base: '/peaceful-startpage/'
+  base: '/peaceful-startpage/',
+  server: {
+    proxy: {
+      '/q': {
+        target: 'https://api.quotable.io',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/q/, ""),
+      }
+    }
+  }
 });

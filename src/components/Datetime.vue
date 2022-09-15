@@ -53,7 +53,7 @@ export default defineComponent({
         border-radius: 20px;
         background-color: var(--color-frame-background);
         backdrop-filter: blur(4px);
-        color: var(--color-button);
+        color: var(--color-text);
     }
 
     .weekday {
