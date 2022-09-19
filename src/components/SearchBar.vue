@@ -3,14 +3,19 @@
         <button @click="changeSearchEngine">
             <font-awesome-icon :icon="searchEngines[currentSearchEngine].icon" size="lg" />
         </button>
-        <input type="text" v-model="searchString" @keyup.enter="search" />
+        <input ref="searchBar" type="text" v-model="searchString" @keyup.enter="search" />
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 
 export default defineComponent({
+    setup() {
+        const searchBar = ref<HTMLElement | null>(null);
+        onMounted(() => { searchBar.value?.focus(); });
+        return { searchBar }
+    },
     data() {
         return {
             searchString: '',
